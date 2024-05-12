@@ -17,9 +17,9 @@ spec:
           image: mysql:latest
           env:
             - name: MYSQL_ROOT_PASSWORD
-              value: "kobe0839"
+              value: "springstudent"
             - name: MYSQL_DATABASE
-              value: "jam"  # Set your desired database name here
+              value: "springstudent"  # Set your desired database name here
           ports:
             - containerPort: 3306
 ---
