@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: 654661216054.dkr.ecr.us-east-1.amazonaws.com/springboot3:latest
+          image: 654661216054.dkr.ecr.us-east-1.amazonaws.com/springboot3:new
           env:
             - name: SPRING_DATASOURCE_URL
               value: "jdbc:mysql://mysql-service:3306/jam?useSSL=false&serverTimezone=UTC"
