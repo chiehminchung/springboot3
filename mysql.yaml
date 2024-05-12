@@ -15,6 +15,11 @@ spec:
       containers:
         - name: mysql
           image: mysql:latest
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "kobe0839"
+            - name: MYSQL_DATABASE
+              value: "jam"  # Set your desired database name here
           ports:
             - containerPort: 3306
 ---
