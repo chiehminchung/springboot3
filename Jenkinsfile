@@ -17,7 +17,7 @@ pipeline{
                         script{
                             sh 'docker build -t springboot3 --platform linux/amd64 .'
 //                             sh 'docker tag chiehmin/hello-eks:latest 654661216054.dkr.ecr.us-east-2.amazonaws.com/spring-eks:latest'
-                            sh 'docker tag springboot3:latest 654661216054.dkr.ecr.us-east-1.amazonaws.com/springboot3:new'
+                            sh 'docker tag springboot3:latest 654661216054.dkr.ecr.us-east-1.amazonaws.com/springboot3:1'
 
                         }
 
@@ -27,7 +27,7 @@ pipeline{
             steps{
 
                 sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 654661216054.dkr.ecr.us-east-1.amazonaws.com'
-                sh 'docker push 654661216054.dkr.ecr.us-east-1.amazonaws.com/springboot3:new'
+                sh 'docker push 654661216054.dkr.ecr.us-east-1.amazonaws.com/springboot3:1'
             }
         }
         stage('eks'){
